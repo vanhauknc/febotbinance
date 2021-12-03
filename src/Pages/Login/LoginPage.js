@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 import {  Link,Redirect,withRouter  } from "react-router-dom";
 import NotificationComponent from '../../Components/NotificationComponent';
@@ -29,10 +30,10 @@ class LoginPage extends Component {
        {
            return
        }
-       callApi('login','POST',this.state).then(res=>{
+       axios.post('http://localhost:4123/api/login',this.state).then(res=>{
            if(res.data.status)
            {
-            localStorage.setItem("token",res.data.token)
+            localStorage.setItem("hyperUser",JSON.stringify(res.data.data))
             this.props.history.push('/home')
             
            }else{
@@ -43,7 +44,7 @@ class LoginPage extends Component {
     }
 
     render() {
-        let isLogin = localStorage.getItem('token');
+        let isLogin = localStorage.getItem('hyperUser');
 
         if(isLogin)
         {

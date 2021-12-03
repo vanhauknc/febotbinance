@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
 import {checkValidateForm} from '../../helper/helper'
 import callApi from '../../utils/apiCaller'
 import NotificationComponent from '../../Components/NotificationComponent'
+import axios from 'axios';
 class RegisterPage extends Component {
     constructor(props) {
         super(props)
@@ -26,7 +27,7 @@ class RegisterPage extends Component {
         {
             return
         }
-        callApi('register','POST',this.state).then(res=>{
+        axios.post('http://localhost:4123/api/register',this.state).then(res=>{
             if(res.data.status)
             {
                 NotificationComponent.openNotificationWithIcon('success',"Thông báo !",res.data.message)
@@ -39,7 +40,12 @@ class RegisterPage extends Component {
         
      }
     render() {
+        let isLogin = localStorage.getItem('hyperUser');
 
+        if(isLogin)
+        {
+            return <Redirect to='/home' />
+        }
         let { name, email, password, repassword } = this.state;
         return (
             <div className="login">
