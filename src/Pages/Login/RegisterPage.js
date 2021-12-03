@@ -60,11 +60,11 @@ class RegisterPage extends Component {
                             <div className="my-auto">
                                 <img alt="HyperSoft" className="-intro-x w-1/2 -mt-16" src="dist/images/illustration.svg" />
                                 <div className="-intro-x text-white font-medium text-4xl leading-tight mt-10">
-                                    A few more clicks to
+                                    Đăng ký tài khoản của bạn
                                     <br />
-                                    sign up to your account.
+                                    chỉ bằng 1 click
                                 </div>
-                                <div className="-intro-x mt-5 text-lg text-white">Open your store in just a few clicks!</div>
+                                <div className="-intro-x mt-5 text-lg text-white">Hộp công cụ miễn phí dành cho Trader </div>
                             </div>
                         </div>
                         {/* END: Register Info */}
@@ -72,9 +72,9 @@ class RegisterPage extends Component {
                         <div className="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0">
                             <div className="my-auto mx-auto xl:ml-20 bg-white xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto">
                                 <h2 className="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left">
-                                    Sign Up
+                                    Đăng ký
                                 </h2>
-                                <div className="intro-x mt-2 text-gray-500 xl:hidden text-center">Open your store in just a few clicks!</div>
+                                <div className="intro-x mt-2 text-gray-500 xl:hidden text-center">Hộp công cụ miễn phí dành cho Trader !</div>
                                 <div className="intro-x mt-8">
                                     <input type="text" name="name" value={name} onChange={this.onChange} className="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Full Name" />
                                     <input type="text" name="email" value={email} onChange={this.onChange} className="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Email" />
@@ -86,8 +86,8 @@ class RegisterPage extends Component {
 
                                 </div>
                                 <div className="intro-x mt-5 xl:mt-8 text-center xl:text-left">
-                                    <button className="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3" onClick={this.onSubmit}>Register</button>
-                                    <button className="button button--lg w-full xl:w-32 text-gray-700 border border-gray-300 mt-3 xl:mt-0"><Link to="/login">Login</Link></button>
+                                    <button className="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3" onClick={this.onSubmit}>Đăng ký</button>
+                                    <button className="button button--lg w-full xl:w-32 text-gray-700 border border-gray-300 mt-3 xl:mt-0"><Link to="/login">Đăng nhập</Link></button>
                                 </div>
                             </div>
                         </div>
