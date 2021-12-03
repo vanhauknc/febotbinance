@@ -30,7 +30,7 @@ class LoginPage extends Component {
        {
            return
        }
-       axios.post('http://localhost:4123/api/login',this.state).then(res=>{
+       axios.post('http://localhost/api/login',this.state).then(res=>{
            if(res.data.status)
            {
             localStorage.setItem("hyperUser",JSON.stringify(res.data.data))

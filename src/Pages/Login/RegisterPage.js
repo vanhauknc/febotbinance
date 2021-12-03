@@ -27,7 +27,7 @@ class RegisterPage extends Component {
         {
             return
         }
-        axios.post('http://localhost:4123/api/register',this.state).then(res=>{
+        axios.post('http://localhost/api/register',this.state).then(res=>{
             if(res.data.status)
             {
                 NotificationComponent.openNotificationWithIcon('success',"Thông báo !",res.data.message)
