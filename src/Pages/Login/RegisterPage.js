@@ -4,6 +4,7 @@ import {checkValidateForm} from '../../helper/helper'
 import callApi from '../../utils/apiCaller'
 import NotificationComponent from '../../Components/NotificationComponent'
 import axios from 'axios';
+import {API_URL} from '../../constants/Config'
 class RegisterPage extends Component {
     constructor(props) {
         super(props)
@@ -27,7 +28,7 @@ class RegisterPage extends Component {
         {
             return
         }
-        axios.post('http://localhost/api/register',this.state).then(res=>{
+        axios.post(API_URL+'/register',this.state).then(res=>{
             if(res.data.status)
             {
                 NotificationComponent.openNotificationWithIcon('success',"Thông báo !",res.data.message)

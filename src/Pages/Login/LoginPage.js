@@ -4,7 +4,7 @@ import {  Link,Redirect,withRouter  } from "react-router-dom";
 import NotificationComponent from '../../Components/NotificationComponent';
 import {checkValidateForm} from '../../helper/helper'
 import callApi from '../../utils/apiCaller';
-
+import {API_URL} from '../../constants/Config'
 
 
 class LoginPage extends Component {
@@ -30,7 +30,7 @@ class LoginPage extends Component {
        {
            return
        }
-       axios.post('http://localhost/api/login',this.state).then(res=>{
+       axios.post(API_URL+'/login',this.state).then(res=>{
            if(res.data.status)
            {
             localStorage.setItem("hyperUser",JSON.stringify(res.data.data))
