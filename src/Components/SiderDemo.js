@@ -1,12 +1,11 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb, Row, Col, Dropdown, Avatar, Modal, Button, Input,Form } from 'antd';
+import { Layout, Menu, Row, Col, Dropdown, Avatar, Modal, Button, Input,Form } from 'antd';
 import {
   DesktopOutlined,
   PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-  DownOutlined,
+  RobotOutlined,
+  NotificationOutlined,
+  StockOutlined
 } from '@ant-design/icons';
 import { actFetchImtsRequest } from '../actions/index'
 import { connect } from 'react-redux';
@@ -189,17 +188,16 @@ handleCancel = () => {
               <Menu.Item key="1" icon={<PieChartOutlined />}>
                 <Link to="/home" >Trang chủ </Link>
               </Menu.Item>
-              <SubMenu key="sub1" icon={<UserOutlined />} title="Tool Cảnh Báo">
+              <SubMenu key="sub1" icon={<NotificationOutlined />} title="Tool Cảnh Báo">
                 <Menu.Item key="3"><Link to="/home/notify" >Cài đặt cảnh báo</Link></Menu.Item>
-                <Menu.Item key="4">Tool 2</Menu.Item>
-                <Menu.Item key="5">Tool 3</Menu.Item>
+                <Menu.Item key="4">Lịch sử</Menu.Item>
               </SubMenu>
-              <SubMenu key="sub2" icon={<TeamOutlined />} title="Bot Telegram">
-                <Menu.Item key="6">Team 1</Menu.Item>
-                <Menu.Item key="8">Team 2</Menu.Item>
+              <SubMenu key="sub2" icon={<RobotOutlined />} title="Bot Telegram">
+                <Menu.Item  key="6"><Link to="/home/introbot" >HD Tạo Bot</Link> </Menu.Item>
+                <Menu.Item  key="7"><Link to="/home/configbot" >Cấu hình Bot</Link></Menu.Item>
               </SubMenu>
 
-              <SubMenu key="sub3" icon={<DesktopOutlined />} title="Coin Tracking">
+              <SubMenu key="sub3" icon={<StockOutlined />} title="Coin Tracking">
                 <Menu.Item key="9">Team 1</Menu.Item>
                 <Menu.Item key="10">Team 2</Menu.Item>
               </SubMenu>
