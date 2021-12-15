@@ -44,12 +44,19 @@ class NotificationPage extends Component {
               width: '20%',
               sorter: (a, b) => a.priceflag - b.priceflag,
             },
+            // {
+            //   title: 'Lặp',
+            //   dataIndex: 'p_status',
+            //   width: '10%',
+            //   sorter: (a, b) => a.p_status.localeCompare(b.p_status),
+            //   render : text => (<div>{text == '1' ? "Một lần" : "Nhiều lần"}</div>)
+            // },
             {
-              title: 'Lặp',
-              dataIndex: 'p_status',
+              title: 'Điều kiện',
+              dataIndex: 'type',
               width: '10%',
-              sorter: (a, b) => a.p_status.localeCompare(b.p_status),
-              render : text => (<div>{text == '1' ? "Một lần" : "Nhiều lần"}</div>)
+              sorter: (a, b) => a.type.localeCompare(b.type),
+              render : text => (<div>{text == 'less' ? "Nhỏ hơn" : "Lớn hơn"}</div>)
             },
             {
                 title: 'Trạng thái',

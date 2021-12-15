@@ -40,6 +40,7 @@ class ModalNotiPage extends Component {
 
      onFinish = (values) => {
          values.status = 'A';
+         values.p_status = '1';
         this.props.addOrder(values);
       };
     
@@ -92,7 +93,7 @@ class ModalNotiPage extends Component {
                             </Select>
                         </Form.Item>
 
-                        <Form.Item
+                        {/* <Form.Item
                             name="p_status"
                             label="Lặp"
                             rules={[{ required: true, message: 'Vui lòng không bỏ trống !' }]}
@@ -102,7 +103,7 @@ class ModalNotiPage extends Component {
                             <Option value="1">1 lần</Option>
                             <Option value="N">Nhiều lần</Option>
                             </Select>
-                        </Form.Item>
+                        </Form.Item> */}
 
                         <Form.Item
                             label="Giá đánh dấu"

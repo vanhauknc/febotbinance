@@ -190,7 +190,7 @@ handleCancel = () => {
               </Menu.Item>
               <SubMenu key="sub1" icon={<NotificationOutlined />} title="Tool Cảnh Báo">
                 <Menu.Item key="3"><Link to="/home/notify" >Cài đặt cảnh báo</Link></Menu.Item>
-                <Menu.Item key="4">Lịch sử</Menu.Item>
+                <Menu.Item key="4"><Link to="/home/history-notify" >Lịch sử</Link></Menu.Item>
               </SubMenu>
               <SubMenu key="sub2" icon={<RobotOutlined />} title="Bot Telegram">
                 <Menu.Item  key="6"><Link to="/home/introbot" >HD Tạo Bot</Link> </Menu.Item>
